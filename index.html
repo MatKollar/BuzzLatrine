@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="mainMenu()">
+    <canvas id="canvas" width="1200" height="800"></canvas>
+   
+    <div id="start" style="display:none">
+        <a href="#" onclick="mainMenu()">Main Menu</a>
+        <a href="#" onclick="startGame()">Shop</a>
+        <a href="#" onclick="restartGame()">Restart</a>
+    </div>
+
+    <div id="main-menu" style="display:none">
+        <h1>BuzzLatrine</h1>
+        <a href="#" onclick="startGame()">Start Game</a>
+    </div>
+
+    <script src="global.js"></script>
+    <script src="listeners.js"></script>
+    <script src="player.js"></script>
+    <script src="cannon.js"></script>
+    <script src="background.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
