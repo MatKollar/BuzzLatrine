@@ -12,13 +12,15 @@ function animate() {
     ctx.restore();
     
     if (playerShooted) {
+        score.update(Xdiff, player.tempY);
+        score.updateMax();
+        score.draw();
         player.draw();
         BG.move();
         cannon.move();
         handleHeightDiff();
         playerHitGround(player);
     }
-
     if (Xdiff < 0.2 && Xdiff != null){  //when player stops call menu
         menu();
     }
@@ -58,6 +60,7 @@ function restartGame(){
     menuDiv.style.display = "none";
     Xdiff = null;
     Ydiff = null;
+    score = new Score();
     player = new Player();
     BG = new Background();
     cannon = new Cannon();
