@@ -68,13 +68,15 @@ function playerHitGround(player) {
 }
 
 function menu() {
-    let startDiv = document.getElementById("start");
+    let startDiv = document.getElementById("menu");
     startDiv.style.display = "block";
 }
 
 function restartGame(){
-    let menuDiv = document.getElementById("start");
+    let menuDiv = document.getElementById("menu");
     menuDiv.style.display = "none";
+    let shop = document.getElementById("shop");
+    shop.style.display = "none";
     Xdiff = null;
     Ydiff = null;
     score = new Score();
@@ -87,12 +89,19 @@ function restartGame(){
 
 function startGame(){
     let mainMenu = document.getElementById("main-menu");
-    mainMenu.style.display = "none";
+    mainMenu.style.display = "none"; 
 }
 
 function mainMenu(){
     let mainMenu = document.getElementById("main-menu");
     mainMenu.style.display = "block";
+    let shop = document.getElementById("shop");
+    shop.style.display = "none";
+}
+
+function shop(){
+    let shop = document.getElementById("shop");
+    shop.style.display = "block";
 }
 
 animate();

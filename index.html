@@ -10,15 +10,20 @@
 <body onload="mainMenu()">
     <canvas id="canvas" width="1200" height="800"></canvas>
    
-    <div id="start" style="display:none">
+    <div id="menu" style="display:none">
         <a href="#" onclick="mainMenu()">Main Menu</a>
-        <a href="#" onclick="startGame()">Shop</a>
+        <a href="#" onclick="shop()">Shop</a>
         <a href="#" onclick="restartGame()">Restart</a>
     </div>
 
     <div id="main-menu" style="display:none">
-        <h1>BuzzLatrine</h1>
-        <a href="#" onclick="startGame()">Start Game</a>
+        <a href="#" onclick="startGame()">PLAY</a>
+    </div>
+
+    <div id="shop" style="display:none">
+        <h1>SHOP</h1>
+        <a href="#" onclick="mainMenu()">Main Menu</a>
+        <a href="#" onclick="restartGame()">LAUNCH!</a>
     </div>
 
     <script src="global.js"></script>
