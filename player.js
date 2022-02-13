@@ -31,9 +31,14 @@ class Player {
 
     draw() {
         ctx.fillStyle = "black";
-        ctx.drawImage(playerSprite,0,0, this.originalWidth, this.originalHeight, this.x-60, this.y-80, this.width, this.height);
-        //ctx.beginPath();
-        //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        //ctx.fill();
+        ctx.drawImage(playerSprite,0,0, this.originalWidth, this.originalHeight, this.x-60, this.y-80, this.width, this.height);   
+    }
+
+    rotate(degrees){
+        ctx.save();
+        ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
+        ctx.rotate(degrees*Math.PI/180)
+        ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);
+        ctx.restore();
     }
 }

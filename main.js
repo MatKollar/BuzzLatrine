@@ -3,7 +3,6 @@ const ctx = canvas.getContext("2d");
 canvas.width = 1200;
 canvas.height = 800;
 
-
 function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -15,7 +14,7 @@ function animate() {
         score.update(Xdiff, player.tempY);
         score.updateMax();
         score.draw();
-        player.draw();
+        drawPlayer();
         BG.move();
         cannon.move();
         handleHeightDiff();
@@ -23,6 +22,24 @@ function animate() {
     }
     if (Xdiff < 0.2 && Xdiff != null){  //when player stops call menu
         menu();
+    }
+}
+
+function drawPlayer(){
+    if (Ydiff < -0.2 && player.tempY < 500) {
+        player.rotate(-15);
+    }
+    else if (Ydiff > 0.2 && player.tempY < 600) {
+        player.rotate(15);
+    }
+    else if (Ydiff > -0.2 && Ydiff < -0.1 && player.tempY < 500) {
+        player.rotate(-8);
+    }
+    else if (Ydiff < 0.2 && Ydiff > 0.1 && player.tempY < 600) {
+        player.rotate(8);
+    }
+    else {
+        player.rotate(0);
     }
 }
 
