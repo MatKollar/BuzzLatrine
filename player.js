@@ -41,4 +41,12 @@ class Player {
         ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);
         ctx.restore();
     }
+
+    clicked(xmouse, ymouse) {
+        const distance = Math.sqrt(((xmouse - this.x-50)**2) + ((ymouse - this.y)**2));
+        if(distance < this.radius){
+            Xdiff = Math.cos(0.785) * 10;
+            Ydiff = Math.sin(-0.785) * 7;
+        }
+    }
 }

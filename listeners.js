@@ -1,12 +1,12 @@
 //Mouse has moved
-canvas.addEventListener("mousemove", e => {
+canvas.addEventListener("mousemove", event => {
     mousePos = {
-        x: e.clientX - canvas.offsetLeft,
-        y: e.clientY - canvas.offsetTop
+        x: event.clientX - canvas.offsetLeft,
+        y: event.clientY - canvas.offsetTop
     }
 });
 
-canvas.addEventListener("click", e => {
+canvas.addEventListener("click", event => {
     //We don't want to be able to shoot a ball at this angle!
     if(angle < -1.5 || angle > 0.5) return;
 
@@ -20,3 +20,10 @@ canvas.addEventListener("click", e => {
 
     playerShooted = true;
 })
+
+canvas.addEventListener("click", event => {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    player.clicked(x,y);
+});

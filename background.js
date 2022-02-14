@@ -10,6 +10,12 @@ class Background {
         this.height = canvas.height + 2200;
     }
     draw(){
+        if (this.x <= -this.width) {
+            this.x = this.width + this.x1;
+        } 
+        if (this.x1 <= -this.width) {
+            this.x1 = this.width + this.x;
+        } 
         ctx.drawImage(background, BG.x, BG.y, BG.width, BG.height);
         ctx.drawImage(background, BG.x1, BG.y, BG.width, BG.height); 
     }
