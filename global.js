@@ -1,5 +1,5 @@
 const gravity = 0.03;
-const friction = 0.005;
+const friction = 0.003;
 const elasticity = 0.5;
 
 let money = 0;

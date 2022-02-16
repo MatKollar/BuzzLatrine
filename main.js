@@ -15,6 +15,7 @@ function animate() {
         score.updateMax();
         score.draw();
         drawPlayer();
+        drawArrow();
         BG.move();
         cannon.move();
         handleHeightDiff();
@@ -43,13 +44,38 @@ function drawPlayer(){
     }
 }
 
+function drawArrow(){
+    const arrowUp = new Image();
+    arrowUp.src="./images/arrow-up.png";
+
+    const arrowDown = new Image();
+    arrowDown.src="./images/arrow-down.png";
+    
+    arrowWidth = 720/16;
+    arrowHeight = 865/16;
+
+    if (Ydiff < -0.1 && player.tempY < -2100 ) {
+        ctx.drawImage(arrowUp, 800, 35, arrowWidth, arrowHeight);
+    }
+    else if (Ydiff > -0.1  && player.tempY < -2100) {
+        ctx.drawImage(arrowDown, 800, 35, arrowWidth, arrowHeight);
+    }
+}
+
 function handleHeightDiff() {
-    if(player.tempY >= canvas.height/2) {
+    if(player.tempY > (canvas.height/2 + (canvas.height/2 - player.y))) {
         player.move();
+        BG.y = -2200;
     }
     else{
-        player.updatePosition();
-        BG.moveY();
+        if(-player.tempY <= (BG.height - 1300)) {
+            player.updatePosition();
+            BG.moveY();
+        }
+        else{
+            player.moveUp();
+            player.updatePosition();
+        }
         cannon.moveY();
     }
 }

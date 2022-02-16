@@ -4,7 +4,7 @@ class Score {
         this.height = 0;
     }
     draw() {
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "white";
         ctx.font = '25px Georgia';
         ctx.strokeText("LENGTH: " + Math.floor(this.length), 50, 50);
         ctx.fillText("LENGTH: " + Math.floor(this.length), 50, 50);

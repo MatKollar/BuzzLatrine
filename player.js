@@ -24,6 +24,13 @@ class Player {
         this.tempY = this.y; 
     }
 
+    moveUp() {
+        if(this.y + this.radius < 780){
+            Ydiff += gravity;
+        } 
+        this.y += Ydiff;
+    }
+
     updatePosition(){
         Ydiff += gravity;
         this.tempY += Ydiff; 
@@ -45,7 +52,7 @@ class Player {
     clicked(xmouse, ymouse) {
         const distance = Math.sqrt(((xmouse - this.x-50)**2) + ((ymouse - this.y)**2));
         if(distance < this.radius){
-            Xdiff = Math.cos(0.785) * 10;
+            Xdiff += Math.cos(0.785) * 10;
             Ydiff = Math.sin(-0.785) * 7;
         }
     }
