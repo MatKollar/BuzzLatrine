@@ -1,6 +1,6 @@
-const gravity = 0.03;
-const friction = 0.003;
-const elasticity = 0.5;
+let gravity = 0.03;
+let friction = 0.003;
+let elasticity = 0.5;
 
 let money = 0;
 let maxLength = 0;
@@ -13,3 +13,6 @@ let Ydiff = null;
 let Xdiff = null;
 let player;
 let BG;
+let mPacket;
+
+let mPacketBought = false;

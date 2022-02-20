@@ -21,12 +21,12 @@ function animate() {
         handleHeightDiff();
         playerHitGround(player);
     }
-    if (Xdiff < 0.2 && Xdiff != null){  //when player stops call menu
+    if (Xdiff < 0.2 && Xdiff != null) {  //when player stops, call menu
         menu();
     }
 }
 
-function drawPlayer(){
+function drawPlayer() {
     if (Ydiff < -0.2 && player.tempY < 500) {
         player.rotate(-15);
     }
@@ -54,25 +54,25 @@ function drawArrow(){
     arrowWidth = 720/16;
     arrowHeight = 865/16;
 
-    if (Ydiff < -0.1 && player.tempY < -2100 ) {
+    if (Ydiff < 0 && player.tempY < -2100 ) {
         ctx.drawImage(arrowUp, 800, 35, arrowWidth, arrowHeight);
     }
-    else if (Ydiff > -0.1  && player.tempY < -2100) {
+    else if (Ydiff > 0  && player.tempY < -2100) {
         ctx.drawImage(arrowDown, 800, 35, arrowWidth, arrowHeight);
     }
 }
 
 function handleHeightDiff() {
-    if(player.tempY > (canvas.height/2 + (canvas.height/2 - player.y))) {
+    if (player.tempY > (canvas.height/2 + (canvas.height/2 - player.y))) {
         player.move();
         BG.y = -2200;
     }
     else{
-        if(-player.tempY <= (BG.height - 1300)) {
+        if (-player.tempY <= (BG.height - 1300)) {
             player.updatePosition();
             BG.moveY();
         }
-        else{
+        else {
             player.moveUp();
             player.updatePosition();
         }
@@ -91,43 +91,6 @@ function playerHitGround(player) {
             Ydiff *= -1;
         }
     }
-}
-
-function menu() {
-    let startDiv = document.getElementById("menu");
-    startDiv.style.display = "block";
-}
-
-function restartGame(){
-    let menuDiv = document.getElementById("menu");
-    menuDiv.style.display = "none";
-    let shop = document.getElementById("shop");
-    shop.style.display = "none";
-    Xdiff = null;
-    Ydiff = null;
-    score = new Score();
-    player = new Player();
-    BG = new Background();
-    cannon = new Cannon();
-    playerShooted = false;
-    canShoot = true;
-}
-
-function startGame(){
-    let mainMenu = document.getElementById("main-menu");
-    mainMenu.style.display = "none"; 
-}
-
-function mainMenu(){
-    let mainMenu = document.getElementById("main-menu");
-    mainMenu.style.display = "block";
-    let shop = document.getElementById("shop");
-    shop.style.display = "none";
-}
-
-function shop(){
-    let shop = document.getElementById("shop");
-    shop.style.display = "block";
 }
 
 animate();

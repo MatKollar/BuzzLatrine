@@ -5,10 +5,8 @@ class Player {
     constructor() {
         this.radius = 75;
         this.mass = this.radius;
-        this.originalWidth = 1690;
-        this.originalHeight = 2090;
-        this.width = this.originalWidth/13;
-        this.height = this.originalHeight/13;
+        this.width = 1690/13;
+        this.height = 2090/13;
         
         this.x = 310;
         this.y = 410;
@@ -38,7 +36,10 @@ class Player {
 
     draw() {
         ctx.fillStyle = "black";
-        ctx.drawImage(playerSprite,0,0, this.originalWidth, this.originalHeight, this.x-60, this.y-80, this.width, this.height);   
+        ctx.drawImage(playerSprite, this.x-60, this.y-80, this.width, this.height);
+        if (mPacketBought) {
+            ctx.drawImage(mPacketSprite, this.x-15, this.y+35, 29, 11);   
+        }   
     }
 
     rotate(degrees){
@@ -46,6 +47,9 @@ class Player {
         ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
         ctx.rotate(degrees*Math.PI/180)
         ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);
+        if (mPacketBought) {
+            ctx.drawImage(mPacketSprite, (this.width/2 *(-1))+45, (this.height/2 *(-1))+35, 29, 11);
+        }
         ctx.restore();
     }
 

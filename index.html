@@ -18,20 +18,32 @@
 
     <div id="main-menu" style="display:none">
         <a href="#" onclick="startGame()">PLAY</a>
+        <a id="shopLink" href="#" onclick="shop()">Shop</a>
     </div>
 
     <div id="shop" style="display:none">
+        <p id="balance"></p>
         <h1>SHOP</h1>
-        <a href="#" onclick="mainMenu()">Main Menu</a>
-        <a href="#" onclick="restartGame()">LAUNCH!</a>
-    </div>
+        <div id="items">
+            <div id="m-packet">
+                <a href="#" onclick="buyMPacket()">
+                    <img src="./images/m-packet.png" alt="m-packet">
+                </a>
+                <h2>$10,000</h2>
+            </div>
+        </div>
+        <a id="link" href="#" onclick="mainMenu()">Main Menu</a>
+        <a id="link" href="#" onclick="restartGame()">LAUNCH!</a>
+    </div> 
 
     <script src="global.js"></script>
     <script src="listeners.js"></script>
     <script src="player.js"></script>
     <script src="score.js"></script>
     <script src="cannon.js"></script>
+    <script src="items.js"></script>
     <script src="background.js"></script>
+    <script src="navigation.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ canvas.addEventListener("mousemove", event => {
 });
 
 canvas.addEventListener("click", event => {
-    //We don't want to be able to shoot a ball at this angle!
+    //We dont want to be able to shoot player at this angle
     if(angle < -1.5 || angle > 0.5) return;
 
     if(!canShoot) return;
