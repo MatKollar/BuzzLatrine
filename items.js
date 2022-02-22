@@ -4,6 +4,9 @@ mPacketSprite.src = './images/m-packet.png'
 const spoilerSprite = new Image();
 spoilerSprite.src = './images/spoiler.png'
 
+const wheelsSprite = new Image();
+wheelsSprite.src = './images/wheels.png'
+
 class Item {
     constructor(price) {
         this.price = price;
@@ -29,6 +32,14 @@ function buySpoiler() {
     spoiler = new Item(5000);
     if (spoiler.buy()) {
         spoilerBought = true;
+        friction -= 0.00025;
+    }
+}
+
+function buyWheels() {
+    wheels = new Item(3000);
+    if (wheels.buy()) {
+        wheelsBought = true;
         friction -= 0.00025;
     }
 }
