@@ -22,8 +22,14 @@ canvas.addEventListener("click", event => {
 })
 
 canvas.addEventListener("click", event => {
-    const rect = canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    player.clicked(x,y);
+    if (playerShooted) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        if (flushes > 0) {
+            player.clicked(x,y);
+            flushed = true;
+            flushes--;
+        }
+    }
 });

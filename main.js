@@ -27,16 +27,17 @@ function animate() {
 }
 
 function drawPlayer() {
-    if (Ydiff < -0.2 && player.tempY < 500) {
+    if (Ydiff < -0.2 && player.tempY < 500) { //player goes up
         player.rotate(-15);
     }
-    else if (Ydiff > 0.2 && player.tempY < 600) {
+    else if (Ydiff > 0.2 && player.tempY < 600) { //down goes down
         player.rotate(15);
+        flushed = false;
     }
-    else if (Ydiff > -0.2 && Ydiff < -0.1 && player.tempY < 500) {
+    else if (Ydiff > -0.2 && Ydiff < -0.1 && player.tempY < 500) {  //player goes up
         player.rotate(-8);
     }
-    else if (Ydiff < 0.2 && Ydiff > 0.1 && player.tempY < 600) {
+    else if (Ydiff < 0.2 && Ydiff > 0.1 && player.tempY < 600) {   //down goes down
         player.rotate(8);
     }
     else {

@@ -15,7 +15,10 @@ let player;
 let BG;
 let mPacket;
 
+let flushes = 4;
+let flushed = false;
+
 let mPacketBought = false;
 let spoilerBought = false;
 let wheelsBought = false;
-let sportWheelsBought = true;
+let sportWheelsBought = false;

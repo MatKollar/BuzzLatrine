@@ -17,6 +17,11 @@ class Score {
         ctx.fillText("MAX LENGTH: " + Math.floor(maxLength), 925, 50);
         ctx.strokeText("MAX HEIGHT: " + Math.floor(maxHeight), 925, 85);
         ctx.fillText("MAX HEIGHT: " + Math.floor(maxHeight), 925, 85);
+        
+        for (let i = 0; i < flushes; i++) {
+            let shift = 50*i;
+            ctx.drawImage(flushSprite, 1115, 200 + shift, 54, 32);
+        }
     }
     update (length, height) {
         this.length += length;

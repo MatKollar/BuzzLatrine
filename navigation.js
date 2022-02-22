@@ -16,6 +16,7 @@ function restartGame(){
     cannon = new Cannon();
     playerShooted = false;
     canShoot = true;
+    flushes = 4;
 }
 
 function startGame(){
