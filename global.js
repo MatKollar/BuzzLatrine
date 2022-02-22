@@ -16,3 +16,4 @@ let BG;
 let mPacket;
 
 let mPacketBought = false;
+let spoilerBought = false;

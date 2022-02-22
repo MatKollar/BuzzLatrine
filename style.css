@@ -106,15 +106,24 @@ a {
     font-size: 2em;
 }
 
-#m-packet{
+#items img {
+    width: 100%;
+}
+
+#items div {
     position: fixed;
+}
+
+#m-packet{
     top: 65%;
     left: 65%;
     width: 150px;
 }
 
-#m-packet img{
-    width: 100%;
+#spoiler {
+    top: 60%;
+    left: 50%;
+    width: 80px; 
 }
 
 

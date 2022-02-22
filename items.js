@@ -1,6 +1,9 @@
 const mPacketSprite = new Image();
 mPacketSprite.src = './images/m-packet.png'
 
+const spoilerSprite = new Image();
+spoilerSprite.src = './images/spoiler.png'
+
 class Item {
     constructor(price) {
         this.price = price;
@@ -9,15 +12,23 @@ class Item {
         if (money >= this.price) {
             money -= this.price;
             document.getElementById("balance").innerHTML = "$ "+ Math.floor(money);
-            mPacketBought = true;
+            return true;
         }
     }
 }
 
 function buyMPacket() {
     mPacket = new Item(10000);
-    mPacket.buy();
-    if (mPacketBought) {
+    if (mPacket.buy()) {
+        mPacketBought = true;
         friction -= 0.0005;
+    }
+}
+
+function buySpoiler() {
+    spoiler = new Item(5000);
+    if (spoiler.buy()) {
+        spoilerBought = true;
+        friction -= 0.00025;
     }
 }

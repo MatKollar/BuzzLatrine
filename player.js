@@ -37,9 +37,14 @@ class Player {
     draw() {
         ctx.fillStyle = "black";
         ctx.drawImage(playerSprite, this.x-60, this.y-80, this.width, this.height);
+        
         if (mPacketBought) {
             ctx.drawImage(mPacketSprite, this.x-15, this.y+35, 29, 11);   
-        }   
+        } 
+        
+        if (spoilerBought) {
+            ctx.drawImage(spoilerSprite, this.x-70, this.y-72, 32, 36);   
+        }
     }
 
     rotate(degrees){
@@ -47,9 +52,16 @@ class Player {
         ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
         ctx.rotate(degrees*Math.PI/180)
         ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);
+        
         if (mPacketBought) {
             ctx.drawImage(mPacketSprite, (this.width/2 *(-1))+45, (this.height/2 *(-1))+35, 29, 11);
         }
+
+        if (spoilerBought) {
+            ctx.drawImage(spoilerSprite, (this.width/2 *(-1))-10, (this.height/2 *(-1))-72, 32, 36);
+        }
+
+
         ctx.restore();
     }
 
