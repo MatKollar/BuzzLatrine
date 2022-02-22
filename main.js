@@ -21,7 +21,7 @@ function animate() {
         handleHeightDiff();
         playerHitGround(player);
     }
-    if (Xdiff < 0.2 && Xdiff != null) {  //when player stops, call menu
+    if (Xdiff < 0.3 && Xdiff != null) {  //when player stops, call menu
         menu();
     }
 }

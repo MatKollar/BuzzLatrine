@@ -115,20 +115,26 @@ a {
 }
 
 #m-packet{
-    top: 65%;
-    left: 65%;
+    top: 44%;
+    left: 67%;
     width: 150px;
 }
 
 #spoiler {
-    top: 60%;
-    left: 50%;
+    top: 40%;
+    left: 52%;
     width: 80px; 
 }
 
 #wheels {
     top: 40%;
-    left: 25%;
+    left: 22%;
+    width: 80px; 
+}
+
+#sport-wheels {
+    top: 40%;
+    left: 37%;
     width: 80px; 
 }
 

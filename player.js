@@ -50,6 +50,12 @@ class Player {
             ctx.drawImage(wheelsSprite, this.x-45, this.y+65, 20, 20);
             ctx.drawImage(wheelsSprite, this.x+20, this.y+65, 20, 20);      
         }
+
+        if (sportWheelsBought) {
+            ctx.drawImage(sportWheelsSprite, this.x-45, this.y+52, 40, 40);
+            ctx.drawImage(sportWheelsSprite, this.x+10, this.y+52, 40, 40);      
+        }
+        
     }
 
     rotate(degrees){
@@ -69,6 +75,11 @@ class Player {
         if (wheelsBought) {
             ctx.drawImage(wheelsSprite, (this.width/2 *(-1))+15, (this.height/2 *(-1))+65, 20, 20);
             ctx.drawImage(wheelsSprite, (this.width/2 *(-1))+80, (this.height/2 *(-1))+65, 20, 20);
+        }
+
+        if (sportWheelsBought) {
+            ctx.drawImage(sportWheelsSprite, (this.width/2 *(-1))+15, (this.height/2 *(-1))+52, 40, 40);
+            ctx.drawImage(sportWheelsSprite, (this.width/2 *(-1))+70, (this.height/2 *(-1))+52, 40, 40);
         }
 
         ctx.restore();

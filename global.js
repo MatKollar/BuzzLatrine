@@ -18,3 +18,4 @@ let mPacket;
 let mPacketBought = false;
 let spoilerBought = false;
 let wheelsBought = false;
+let sportWheelsBought = true;
