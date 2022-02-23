@@ -23,3 +23,4 @@ let spoilerBought = false;
 let wheelsBought = false;
 let sportWheelsBought = false;
 let suitBought = false;
+let helmetBought = false;

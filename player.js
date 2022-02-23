@@ -62,6 +62,10 @@ class Player {
         if (suitBought) {
             ctx.drawImage(suitSprite, this.x-33, this.y-59, 99, 75);   
         }
+
+        if (helmetBought) {
+            ctx.drawImage(helmetSprite, this.x-26, this.y-107, 65, 65);   
+        }
     }
 
     rotate(degrees){
@@ -94,6 +98,10 @@ class Player {
 
         if (suitBought) {
             ctx.drawImage(suitSprite, (this.width/2 *(-1))+34, (this.height/2 *(-1))-34, 99, 75);
+        }
+
+        if (helmetBought) {
+            ctx.drawImage(helmetSprite, (this.width/2 *(-1))+40, (this.height/2 *(-1))-82, 65, 65);
         }
 
         ctx.restore();
