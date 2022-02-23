@@ -10,6 +10,9 @@ wheelsSprite.src = './images/wheels.png'
 const sportWheelsSprite = new Image();
 sportWheelsSprite.src = './images/sport-wheels.png'
 
+const suitSprite = new Image();
+suitSprite.src = './images/suit.png'
+
 class Item {
     constructor(price) {
         this.price = price;
@@ -51,6 +54,14 @@ function buySportWheels() {
     sportWheels = new Item(5000);
     if (sportWheels.buy()) {
         sportWheelsBought = true;
+        friction -= 0.0005;
+    }
+}
+
+function buySuit() {
+    suit = new Item(15000);
+    if (suit.buy()) {
+        suitBought = true;
         friction -= 0.0005;
     }
 }

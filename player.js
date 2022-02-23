@@ -58,6 +58,10 @@ class Player {
             ctx.drawImage(sportWheelsSprite, this.x-52, this.y+27, 40, 40);
             ctx.drawImage(sportWheelsSprite, this.x+7, this.y+27, 40, 40);      
         }
+
+        if (suitBought) {
+            ctx.drawImage(suitSprite, this.x-33, this.y-59, 99, 75);   
+        }
     }
 
     rotate(degrees){
@@ -86,6 +90,10 @@ class Player {
         if (sportWheelsBought) {
             ctx.drawImage(sportWheelsSprite, (this.width/2 *(-1))+15, (this.height/2 *(-1))+52, 40, 40);
             ctx.drawImage(sportWheelsSprite, (this.width/2 *(-1))+70, (this.height/2 *(-1))+52, 40, 40);
+        }
+
+        if (suitBought) {
+            ctx.drawImage(suitSprite, (this.width/2 *(-1))+34, (this.height/2 *(-1))-34, 99, 75);
         }
 
         ctx.restore();
