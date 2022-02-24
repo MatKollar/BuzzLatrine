@@ -34,7 +34,8 @@ function drawPlayer() {
     else if (Ydiff > 0.2 && player.tempY < 600) { //down goes down
         player.rotate(15);
         flushed = false;
-        boosted = false;
+        kofolaBoosted = false;
+        nitroBoosted = false;
     }
     else if (Ydiff > -0.2 && Ydiff < -0.1 && player.tempY < 500) {  //player goes up
         player.rotate(-8);
@@ -66,11 +67,18 @@ function drawArrow(){
 }
 
 function drawBoost() {
-    if (boostAvailable && kofolaBought) {
+    if (boostAvailable && kofolaBought && !nitroBought) {
         kofolaBoostDiv.style.display = "block";
     }
     else {
         kofolaBoostDiv.style.display = "none";
+    }
+
+    if (boostAvailable && nitroBought) {
+        nitroBoostDiv.style.display = "block";
+    }
+    else {
+        nitroBoostDiv.style.display = "none";
     }
 }
 
@@ -108,7 +116,14 @@ function playerHitGround(player) {
 function kofolaBoost() {
     Xdiff += Math.cos(0.785) * 10;
     Ydiff = Math.sin(-0.785) * 10;
-    boosted = true;
+    kofolaBoosted = true;
+    boostAvailable = false;
+}
+
+function nitroBoost() {
+    Xdiff += Math.cos(0.785) * 10;
+    Ydiff = Math.sin(-0.785) * 15;
+    nitroBoosted = true;
     boostAvailable = false;
 }
 

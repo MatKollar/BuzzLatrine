@@ -7,6 +7,9 @@ flushSprite.src = './images/flush.png'
 const kofolaFlowSprite = new Image();
 kofolaFlowSprite.src = './images/kofola-flow.png';
 
+const fireSprite = new Image();
+fireSprite.src = './images/fire.png';
+
 class Player {
     constructor() {
         this.radius = 75;
@@ -76,9 +79,14 @@ class Player {
         ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
         ctx.rotate(degrees*Math.PI/180)
         
-        if (boosted) {
+        if (kofolaBoosted) {
             ctx.drawImage(kofolaSprite, (this.width/2 *(-1))-50, (this.height/2 *(-1))-20, 65, 45);
             ctx.drawImage(kofolaFlowSprite, (this.width/2 *(-1))-94, (this.height/2 *(-1))+12, 49, 22);
+        }
+
+        if (nitroBoosted) {
+            ctx.drawImage(nitroSprite, (this.width/2 *(-1))-60, (this.height/2 *(-1))-20, 74, 34);
+            ctx.drawImage(fireSprite, (this.width/2 *(-1))-120, (this.height/2 *(-1))+3, 60, 31);
         }
         
         ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);

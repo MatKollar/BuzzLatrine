@@ -19,6 +19,9 @@ helmetSprite.src = './images/helmet.png'
 const kofolaSprite = new Image();
 kofolaSprite.src = './images/kofola.png'
 
+const nitroSprite = new Image();
+nitroSprite.src = './images/nitro.png'
+
 class Item {
     constructor(price) {
         this.price = price;
@@ -84,6 +87,12 @@ function buyKofola() {
     kofola = new Item(10000);
     if (kofola.buy()) {
         kofolaBought = true;
-        friction -= 0.0005;
+    }
+}
+
+function buyNitro() {
+    nitro = new Item(15000);
+    if (nitro.buy()) {
+        nitroBought = true;
     }
 }

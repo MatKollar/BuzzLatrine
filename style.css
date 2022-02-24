@@ -167,3 +167,19 @@ a {
     width: 100%;
 }
 
+#nitro {
+    top: 25%;
+    left: 60%;
+    width: 125px; 
+}
+
+#nitroBoost {
+    position: fixed;
+    width: 120px;
+    top: 25%;
+    left: 77%;
+}
+
+#nitroBoost img {
+    width: 100%;
+}

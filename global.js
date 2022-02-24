@@ -25,8 +25,11 @@ let sportWheelsBought = false;
 let suitBought = false;
 let helmetBought = false;
 let kofolaBought = false;
+let nitroBought = false;
 
-let boosted = false;
+let kofolaBoosted = false;
+let nitroBoosted = false;
 let boostAvailable = false;
 let kofolaBoostDiv = document.getElementById("kofolaBoost");
+let nitroBoostDiv = document.getElementById("nitroBoost");
 
