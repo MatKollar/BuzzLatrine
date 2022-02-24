@@ -88,7 +88,7 @@ a {
 }
 
 #shop #link{
-    margin: 550px 20px 0px;
+    margin: 630px 50px 0px;
     color: #ffffff;
     font-size:2.5em;
     z-index: 5;
@@ -96,12 +96,12 @@ a {
 
 #shop h1{
     font-size: 3em;
-    margin-top: 80px;
+    margin-top: 35px;
 }
 
 #balance{
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: 80px;
     font-size: 2em;
 }
@@ -116,43 +116,43 @@ a {
 
 #m-packet{
     top: 44%;
-    left: 67%;
+    left: 68%;
     width: 150px;
 }
 
 #spoiler {
     top: 40%;
-    left: 52%;
+    left: 54%;
     width: 80px; 
 }
 
 #wheels {
     top: 40%;
-    left: 22%;
+    left: 23%;
     width: 80px; 
 }
 
 #sport-wheels {
     top: 40%;
-    left: 37%;
+    left: 38%;
     width: 80px; 
 }
 
 #suit {
     top: 60%;
-    left: 36%;
+    left: 37%;
     width: 180px; 
 }
 
 #helmet {
     top: 60%;
-    left: 54%;
+    left: 56%;
     width: 100px; 
 }
 
 #kofola {
     top: 23%;
-    left: 30%;
+    left: 35%;
     width: 120px; 
 }
 
@@ -168,9 +168,9 @@ a {
 }
 
 #nitro {
-    top: 25%;
-    left: 60%;
-    width: 125px; 
+    top: 23%;
+    left: 55%;
+    width: 125px;
 }
 
 #nitroBoost {

@@ -36,63 +36,95 @@ class Item {
 }
 
 function buyMPacket() {
+    let normal = document.getElementById("m-packet-normal");
+    let gray = document.getElementById("m-packet-gray");
     mPacket = new Item(10000);
-    if (mPacket.buy()) {
+    if (!mPacketBought && mPacket.buy()) {
         mPacketBought = true;
         friction -= 0.0005;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buySpoiler() {
+    let normal = document.getElementById("spoiler-normal");
+    let gray = document.getElementById("spoiler-gray");
     spoiler = new Item(5000);
-    if (spoiler.buy()) {
+    if (!spoilerBought && spoiler.buy()) {
         spoilerBought = true;
         friction -= 0.00025;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buyWheels() {
+    let normal = document.getElementById("wheels-normal");
+    let gray = document.getElementById("wheels-gray");
     wheels = new Item(3000);
-    if (wheels.buy()) {
+    if (!wheelsBought && wheels.buy()) {
         wheelsBought = true;
         friction -= 0.00025;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buySportWheels() {
+    let normal = document.getElementById("sport-wheels-normal");
+    let gray = document.getElementById("sport-wheels-gray");
     sportWheels = new Item(5000);
-    if (sportWheels.buy()) {
+    if (!sportWheelsBought && wheelsBought && sportWheels.buy()) {
         sportWheelsBought = true;
         friction -= 0.0005;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buySuit() {
+    let normal = document.getElementById("suit-normal");
+    let gray = document.getElementById("suit-gray");
     suit = new Item(15000);
-    if (suit.buy()) {
+    if (!suitBought && suit.buy()) {
         suitBought = true;
         friction -= 0.0005;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buyHelmet() {
+    let normal = document.getElementById("helmet-normal");
+    let gray = document.getElementById("helmet-gray");
     helmet = new Item(10000);
-    if (helmet.buy()) {
+    if (!helmetBought && helmet.buy()) {
         helmetBought = true;
         friction -= 0.0005;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buyKofola() {
+    let normal = document.getElementById("kofola-normal");
+    let gray = document.getElementById("kofola-gray");
     kofola = new Item(10000);
-    if (kofola.buy()) {
+    if (!kofolaBought && kofola.buy()) {
         kofolaBought = true;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
 
 function buyNitro() {
+    let normal = document.getElementById("nitro-normal");
+    let gray = document.getElementById("nitro-gray");
     nitro = new Item(15000);
-    if (nitro.buy()) {
+    if (!nitroBought && kofolaBought && nitro.buy()) {
         nitroBought = true;
+        gray.style.display = 'none';
+        normal.style.display = 'block';
     }
 }
