@@ -20,7 +20,7 @@ class Score {
         
         for (let i = 0; i < flushes; i++) {
             let shift = 50*i;
-            ctx.drawImage(flushSprite, 1115, 200 + shift, 54, 32);
+            ctx.drawImage(flushSprite, 1115, 300 + shift, 54, 32);
         }
     }
     update (length, height) {

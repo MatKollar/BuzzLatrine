@@ -8,6 +8,7 @@ function restartGame(){
     menuDiv.style.display = "none";
     let shop = document.getElementById("shop");
     shop.style.display = "none";
+    kofolaBoostDiv.style.display = "none";
     Xdiff = null;
     Ydiff = null;
     score = new Score();
@@ -16,7 +17,7 @@ function restartGame(){
     cannon = new Cannon();
     playerShooted = false;
     canShoot = true;
-    flushes = 4;
+    flushes = 3;
 }
 
 function startGame(){
@@ -29,10 +30,12 @@ function mainMenu(){
     mainMenu.style.display = "block";
     let shop = document.getElementById("shop");
     shop.style.display = "none";
+    boostAvailable = false;
 }
 
 function shop(){
     let shop = document.getElementById("shop");
     shop.style.display = "block";
+    boostAvailable = false;
     document.getElementById("balance").innerHTML = "$ "+ Math.floor(money);
 }

@@ -15,7 +15,7 @@ let player;
 let BG;
 let mPacket;
 
-let flushes = 4;
+let flushes = 3;
 let flushed = false;
 
 let mPacketBought = false;
@@ -24,3 +24,9 @@ let wheelsBought = false;
 let sportWheelsBought = false;
 let suitBought = false;
 let helmetBought = false;
+let kofolaBought = false;
+
+let boosted = false;
+let boostAvailable = false;
+let kofolaBoostDiv = document.getElementById("kofolaBoost");
+

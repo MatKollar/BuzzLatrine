@@ -150,4 +150,20 @@ a {
     width: 100px; 
 }
 
+#kofola {
+    top: 23%;
+    left: 30%;
+    width: 120px; 
+}
+
+#kofolaBoost {
+    position: fixed;
+    width: 120px;
+    top: 25%;
+    left: 77%;
+}
+
+#kofolaBoost img {
+    width: 100%;
+}
 

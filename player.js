@@ -4,6 +4,9 @@ playerSprite.src = './images/player.png'
 const flushSprite = new Image();
 flushSprite.src = './images/flush.png'
 
+const kofolaFlowSprite = new Image();
+kofolaFlowSprite.src = './images/kofola-flow.png';
+
 class Player {
     constructor() {
         this.radius = 75;
@@ -72,6 +75,12 @@ class Player {
         ctx.save();
         ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
         ctx.rotate(degrees*Math.PI/180)
+        
+        if (boosted) {
+            ctx.drawImage(kofolaSprite, (this.width/2 *(-1))-50, (this.height/2 *(-1))-20, 65, 45);
+            ctx.drawImage(kofolaFlowSprite, (this.width/2 *(-1))-94, (this.height/2 *(-1))+12, 49, 22);
+        }
+        
         ctx.drawImage(playerSprite, (this.width/2 *(-1)), (this.height/2 *(-1))-80, this.width, this.height);
         
         if (flushed) {
@@ -112,6 +121,8 @@ class Player {
         if(distance < this.radius){
             Xdiff += Math.cos(0.785) * 10;
             Ydiff = Math.sin(-0.785) * 7;
+            flushed = true;
+            flushes--;
         }
     }
 }

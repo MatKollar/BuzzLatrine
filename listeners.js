@@ -19,6 +19,7 @@ canvas.addEventListener("click", event => {
     Ydiff = Math.sin(angle) * 7;
 
     playerShooted = true;
+    boostAvailable = true;
 })
 
 canvas.addEventListener("click", event => {
@@ -28,8 +29,6 @@ canvas.addEventListener("click", event => {
         const y = event.clientY - rect.top;
         if (flushes > 0) {
             player.clicked(x,y);
-            flushed = true;
-            flushes--;
         }
     }
 });
