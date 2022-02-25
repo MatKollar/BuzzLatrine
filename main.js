@@ -158,7 +158,7 @@ function handleEnemies() {
 
 function spawnFly() {
     if (fly.x < -100) {
-        y = getRandomInt(-500,350);
+        y = getRandomInt(-400,350);
         fly = new Fly(1200, y);
     }
 }
