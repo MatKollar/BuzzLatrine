@@ -22,7 +22,7 @@ function animate() {
         playerHitGround(player);
         drawBoost();
     }
-    if (Xdiff < 0.3 && Xdiff != null) {  //when player stops, call menu
+    if (Xdiff < 0.4 && Xdiff != null) {  //when player stops, call menu
         menu();
     }
 }
@@ -114,14 +114,14 @@ function playerHitGround(player) {
 }
 
 function kofolaBoost() {
-    Xdiff += Math.cos(0.785) * 10;
+    Xdiff += Math.cos(0.785) * 12;
     Ydiff = Math.sin(-0.785) * 10;
     kofolaBoosted = true;
     boostAvailable = false;
 }
 
 function nitroBoost() {
-    Xdiff += Math.cos(0.785) * 10;
+    Xdiff += Math.cos(0.785) * 20;
     Ydiff = Math.sin(-0.785) * 15;
     nitroBoosted = true;
     boostAvailable = false;

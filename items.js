@@ -38,7 +38,7 @@ class Item {
 function buyMPacket() {
     let normal = document.getElementById("m-packet-normal");
     let gray = document.getElementById("m-packet-gray");
-    mPacket = new Item(10000);
+    mPacket = new Item(50000);
     if (!mPacketBought && mPacket.buy()) {
         mPacketBought = true;
         friction -= 0.0005;
@@ -50,10 +50,11 @@ function buyMPacket() {
 function buySpoiler() {
     let normal = document.getElementById("spoiler-normal");
     let gray = document.getElementById("spoiler-gray");
-    spoiler = new Item(5000);
+    spoiler = new Item(10000);
     if (!spoilerBought && spoiler.buy()) {
         spoilerBought = true;
         friction -= 0.00025;
+        gravity -= 0.0025;
         gray.style.display = 'none';
         normal.style.display = 'block';
     }
@@ -62,7 +63,7 @@ function buySpoiler() {
 function buyWheels() {
     let normal = document.getElementById("wheels-normal");
     let gray = document.getElementById("wheels-gray");
-    wheels = new Item(3000);
+    wheels = new Item(5000);
     if (!wheelsBought && wheels.buy()) {
         wheelsBought = true;
         friction -= 0.00025;
@@ -74,7 +75,7 @@ function buyWheels() {
 function buySportWheels() {
     let normal = document.getElementById("sport-wheels-normal");
     let gray = document.getElementById("sport-wheels-gray");
-    sportWheels = new Item(5000);
+    sportWheels = new Item(20000);
     if (!sportWheelsBought && wheelsBought && sportWheels.buy()) {
         sportWheelsBought = true;
         friction -= 0.0005;
@@ -86,10 +87,11 @@ function buySportWheels() {
 function buySuit() {
     let normal = document.getElementById("suit-normal");
     let gray = document.getElementById("suit-gray");
-    suit = new Item(15000);
+    suit = new Item(100000);
     if (!suitBought && suit.buy()) {
         suitBought = true;
-        friction -= 0.0005;
+        friction -= 0.00075;
+        gravity -= 0.005;
         gray.style.display = 'none';
         normal.style.display = 'block';
     }
@@ -98,10 +100,11 @@ function buySuit() {
 function buyHelmet() {
     let normal = document.getElementById("helmet-normal");
     let gray = document.getElementById("helmet-gray");
-    helmet = new Item(10000);
+    helmet = new Item(30000);
     if (!helmetBought && helmet.buy()) {
         helmetBought = true;
-        friction -= 0.0005;
+        friction -= 0.00025;
+        gravity -= 0.0025;
         gray.style.display = 'none';
         normal.style.display = 'block';
     }
@@ -121,7 +124,7 @@ function buyKofola() {
 function buyNitro() {
     let normal = document.getElementById("nitro-normal");
     let gray = document.getElementById("nitro-gray");
-    nitro = new Item(15000);
+    nitro = new Item(50000);
     if (!nitroBought && kofolaBought && nitro.buy()) {
         nitroBought = true;
         gray.style.display = 'none';
