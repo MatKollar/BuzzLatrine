@@ -15,6 +15,7 @@ function restartGame(){
     player = new Player();
     BG = new Background();
     cannon = new Cannon();
+    fly = new Fly(1200,-50);
     playerShooted = false;
     canShoot = true;
     flushes = 3;

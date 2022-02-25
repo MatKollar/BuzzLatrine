@@ -13,14 +13,15 @@ function animate() {
     if (playerShooted) {
         score.update(Xdiff, player.tempY);
         score.updateMax();
-        score.draw();
         drawPlayer();
         drawArrow();
+        handleEnemies();
         BG.move();
         cannon.move();
         handleHeightDiff();
         playerHitGround(player);
         drawBoost();
+        score.draw();
     }
     if (Xdiff < 0.4 && Xdiff != null) {  //when player stops, call menu
         menu();
@@ -125,6 +126,36 @@ function nitroBoost() {
     Ydiff = Math.sin(-0.785) * 15;
     nitroBoosted = true;
     boostAvailable = false;
+}
+
+
+function handleEnemies() {
+    spawnFly();
+    fly.move();
+    fly.draw();
+    if (fly.hitted()) {
+        hittedY = fly.y;
+        hittedX = fly.x;
+        hitDuration = 10; 
+        fly.die();
+    }
+    if (hitDuration > 0) {
+        fly.drawHitEffect(hittedY, hittedX);
+        hitDuration--;
+    }
+}
+
+function spawnFly() {
+    if (fly.x < -100) {
+        y = getRandomInt(-500,350);
+        fly = new Fly(1200, y);
+    }
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 animate();

@@ -53,7 +53,7 @@ function buySpoiler() {
     spoiler = new Item(10000);
     if (!spoilerBought && spoiler.buy()) {
         spoilerBought = true;
-        friction -= 0.00025;
+        friction -= 0.0003;
         gravity -= 0.0025;
         gray.style.display = 'none';
         normal.style.display = 'block';
@@ -91,7 +91,7 @@ function buySuit() {
     if (!suitBought && suit.buy()) {
         suitBought = true;
         friction -= 0.00075;
-        gravity -= 0.005;
+        gravity -= 0.0075;
         gray.style.display = 'none';
         normal.style.display = 'block';
     }

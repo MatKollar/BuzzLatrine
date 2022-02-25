@@ -33,3 +33,7 @@ let boostAvailable = false;
 let kofolaBoostDiv = document.getElementById("kofolaBoost");
 let nitroBoostDiv = document.getElementById("nitroBoost");
 
+let hittedY;
+let hittedX;
+let hitDuration;
+
