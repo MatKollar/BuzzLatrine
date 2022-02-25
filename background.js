@@ -1,5 +1,5 @@
 const background = new Image();
-background.src = './images/BG.png';
+background.src = './images/BG.png'; //Buildings was Designed by Freepik
 
 class Background {
     constructor() {

@@ -1,5 +1,5 @@
 const pipesSprite = new Image();
-pipesSprite.src = './images/pipes.png'
+pipesSprite.src = './images/pipes.png'; //Parts was designed by macrovector / Freepik
 
 const cannonTop = new Image();
 cannonTop.src="./images/cannon.png";
@@ -10,10 +10,10 @@ class Cannon {
         this.y = 580;
         this.topX = this.x-115;
         this.topY = this.y-170;
-        this.pipesWidth = 1425/6;
-        this.pipesHeight = 3910/6;
-        this.cannonWidth = 450/6;
-        this.cannonHeight = 380/6;
+        this.pipesWidth = 238;
+        this.pipesHeight = 652;
+        this.cannonWidth = 75;
+        this.cannonHeight = 63;
     }
 
     pipes() {
@@ -34,12 +34,12 @@ class Cannon {
         ctx.save();
         
         this.rotateTop();
-        if (playerShooted === false) {
+        if (!playerShooted) {
             player = new Player(this.topX+120, this.topY);
             player.draw();
         }
         
-        ctx.drawImage(cannonTop,this.topX,this.topY,this.cannonWidth, this.cannonHeight);
+        ctx.drawImage(cannonTop, this.topX,this.topY, this.cannonWidth, this.cannonHeight);
     }
 
     move() { 

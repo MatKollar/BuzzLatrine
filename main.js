@@ -11,17 +11,17 @@ function animate() {
     ctx.restore();
     
     if (playerShooted) {
-        score.update(Xdiff, player.tempY);
-        score.updateMax();
         drawPlayer();
         drawArrow();
-        handleEnemies();
+        drawBoost();
+        drawRestart();
         BG.move();
         cannon.move();
         handleHeightDiff();
         playerHitGround(player);
-        drawBoost();
-        drawRestart();
+        handleEnemies();
+        score.update(Xdiff, player.tempY);
+        score.updateMax();
         score.draw();
     }
     if (Xdiff < 0.4 && Xdiff != null) {  //when player stops, call menu
@@ -57,8 +57,8 @@ function drawArrow(){
     const arrowDown = new Image();
     arrowDown.src="./images/arrow-down.png";
     
-    arrowWidth = 720/16;
-    arrowHeight = 865/16;
+    arrowWidth = 45;
+    arrowHeight = 54;
 
     if (Ydiff < 0 && player.tempY < -2100 ) {
         ctx.drawImage(arrowUp, 800, 35, arrowWidth, arrowHeight);
@@ -113,9 +113,7 @@ function handleHeightDiff() {
 }
 
 function playerHitGround(player) {
-    //A collision has occured on bottom side of the canvas
     if (player.y + player.radius > 780) {
-        //Sort out elasticity & then change direction
         Ydiff = (Ydiff * elasticity);
         if (player.y + player.radius > 780) {
             //Bottom of player hits bottom of canvas
@@ -139,7 +137,6 @@ function nitroBoost() {
     boostAvailable = false;
 }
 
-
 function handleEnemies() {
     spawnFly();
     fly.move();
@@ -147,7 +144,7 @@ function handleEnemies() {
     if (fly.hitted()) {
         hittedY = fly.y;
         hittedX = fly.x;
-        hitDuration = 10; 
+        hitDuration = 10;
         fly.die();
     }
     if (hitDuration > 0) {
@@ -169,4 +166,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-animate();
+window.addEventListener('load', function () {
+    animate();
+})

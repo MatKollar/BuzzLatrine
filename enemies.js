@@ -1,8 +1,8 @@
 const flySprite = new Image();
-flySprite.src = './images/fly.png'
+flySprite.src = './images/fly.png';  //Designed by brgfx / Freepik
 
 const hitSprite = new Image();
-hitSprite.src = './images/hit-effect.png'
+hitSprite.src = './images/hit-effect.png';
 
 class Fly {
     constructor(x,y) {
@@ -11,6 +11,7 @@ class Fly {
         this.width = 62;
         this.height = 37;
     }
+
     move() {
         this.x -= Xdiff;
         if (player.tempY < (canvas.height/2 + (canvas.height/2 - player.y))) {
@@ -18,9 +19,11 @@ class Fly {
         }
         
     }
+
     draw() {
         ctx.drawImage(flySprite, this.x, this.y, this.width, this.height); 
     }
+
     hitted() {
         let dx = this.x - player.x;
         let dy = this.y - player.y + 25;
@@ -29,10 +32,12 @@ class Fly {
             return true;
         } 
     }
+
     die() {
         this.x = -500;
         Xdiff /= 1.5;  
     }
+
     drawHitEffect(x, y) {
         ctx.drawImage(hitSprite, x-100, y-100, 300, 300);
     }

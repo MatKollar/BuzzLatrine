@@ -14,8 +14,8 @@ class Player {
     constructor() {
         this.radius = 75;
         this.mass = this.radius;
-        this.width = 1690/13;
-        this.height = 2090/13;
+        this.width = 130;
+        this.height = 161;
         
         this.x = 310;
         this.y = 410;
@@ -23,8 +23,7 @@ class Player {
     }
 
     move() {  
-        //Sort out gravity
-        if(this.y + this.radius < 780){
+        if(this.y + this.radius < 780) {
             Ydiff += gravity;
         } 
         this.y += Ydiff;
@@ -32,7 +31,7 @@ class Player {
     }
 
     moveUp() {
-        if(this.y + this.radius < 780){
+        if(this.y + this.radius < 780) {
             Ydiff += gravity;
         } 
         this.y += Ydiff;
@@ -74,7 +73,7 @@ class Player {
         }
     }
 
-    rotate(degrees){
+    rotate(degrees) {
         ctx.save();
         ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
         ctx.rotate(degrees*Math.PI/180)

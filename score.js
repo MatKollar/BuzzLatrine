@@ -27,7 +27,7 @@ class Score {
         this.height = -height + 705.1;
         money += 0.5*length;
     }
-    updateMax(){
+    updateMax() {
         if (this.length > maxLength) {
             maxLength = this.length;
         }
