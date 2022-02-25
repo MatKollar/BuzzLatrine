@@ -30,8 +30,10 @@ let nitroBought = false;
 let kofolaBoosted = false;
 let nitroBoosted = false;
 let boostAvailable = false;
+let restartAvailable = false;
 let kofolaBoostDiv = document.getElementById("kofolaBoost");
 let nitroBoostDiv = document.getElementById("nitroBoost");
+let restartButton = document.getElementById("restartButton");
 
 let hittedY;
 let hittedX;

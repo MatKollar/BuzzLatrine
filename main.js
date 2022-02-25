@@ -21,6 +21,7 @@ function animate() {
         handleHeightDiff();
         playerHitGround(player);
         drawBoost();
+        drawRestart();
         score.draw();
     }
     if (Xdiff < 0.4 && Xdiff != null) {  //when player stops, call menu
@@ -81,6 +82,16 @@ function drawBoost() {
     else {
         nitroBoostDiv.style.display = "none";
     }
+}
+
+function drawRestart() {
+    if (restartAvailable) {
+        restartButton.style.display = "block";
+    }
+    else {
+        restartButton.style.display = "none";
+    }
+    
 }
 
 function handleHeightDiff() {

@@ -20,6 +20,7 @@ canvas.addEventListener("click", event => {
 
     playerShooted = true;
     boostAvailable = true;
+    restartAvailable = true;
 })
 
 canvas.addEventListener("click", event => {

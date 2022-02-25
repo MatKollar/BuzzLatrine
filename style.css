@@ -157,13 +157,14 @@ a {
 }
 
 #kofolaBoost {
-    position: fixed;
+    position: absolute;
     width: 120px;
-    top: 25%;
-    left: 77%;
+    left:-130px;
+    top: -250px;
 }
 
 #kofolaBoost img {
+    position: absolute;
     width: 100%;
 }
 
@@ -174,12 +175,25 @@ a {
 }
 
 #nitroBoost {
-    position: fixed;
+    position: absolute;
     width: 120px;
-    top: 25%;
-    left: 77%;
+    left:-130px;
+    top: -250px;
 }
 
 #nitroBoost img {
     width: 100%;
+}
+
+#restartButton a{
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#restartButton {
+    position: absolute;
+    width: 120px;
+    left:-1150px;
+    top: -260px;
 }

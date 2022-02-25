@@ -9,6 +9,7 @@ function restartGame(){
     let shop = document.getElementById("shop");
     shop.style.display = "none";
     kofolaBoostDiv.style.display = "none";
+    restartButton.style.display = "none";
     Xdiff = null;
     Ydiff = null;
     score = new Score();
@@ -32,11 +33,13 @@ function mainMenu(){
     let shop = document.getElementById("shop");
     shop.style.display = "none";
     boostAvailable = false;
+    restartAvailable = false;
 }
 
 function shop(){
     let shop = document.getElementById("shop");
     shop.style.display = "block";
     boostAvailable = false;
+    restartAvailable = false;
     document.getElementById("balance").innerHTML = "$ "+ Math.floor(money);
 }
